@@ -55,6 +55,8 @@ def main():
         exit()
 
     header = vcf.header
+    header.add_line('###fileDate=20191004')
+    header.add_line('##reference=GRCh37/hg19')
     header.add_line('##INFO=<ID=SpliceAI,Number=.,Type=String,Description="SpliceAIv1.3.1 variant '
                     'annotation. These include delta scores (DS) and delta positions (DP) for '
                     'acceptor gain (AG), acceptor loss (AL), donor gain (DG), and donor loss (DL). '
