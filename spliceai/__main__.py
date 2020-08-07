@@ -62,7 +62,7 @@ def main():
                     'annotation. These include delta scores (DS) and delta positions (DP) for '
                     'acceptor gain (AG), acceptor loss (AL), donor gain (DG), and donor loss (DL). '
                     'Format: ALLELE|SYMBOL|DS_AG|DS_AL|DS_DG|DS_DL|DP_AG|DP_AL|DP_DG|DP_DL">')
-    header.add_line('##INFO=<ID=NS,Number=20000,Type=Int,Description="Dummy NS">')
+    header.add_line('##INFO=<ID=NS,Number=20000,Type=Integer,Description="Dummy NS">')
 
     try:
         output = pysam.VariantFile(args.O, mode='w', header=header)
